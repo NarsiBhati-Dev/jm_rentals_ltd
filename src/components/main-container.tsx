@@ -10,7 +10,7 @@ const MainContainer = ({ children, className }: MainContainerProps) => {
   return (
     <main
       className={clsx(
-        'flex items-center justify-center bg-black py-20 text-6xl font-bold text-white',
+        'mt-18 flex items-center justify-center bg-black py-24 text-6xl font-bold text-white',
         className,
       )}
     >

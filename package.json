@@ -11,6 +11,7 @@
     "lint:fix": "next lint --fix && prettier --write ."
   },
   "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
     "clsx": "^2.1.1",
     "next": "15.2.0",
     "react": "^19.0.0",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/body-scroll-lock": "^3.1.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

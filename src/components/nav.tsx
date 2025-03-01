@@ -5,12 +5,14 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import React from 'react';
 import clsx from 'clsx';
+import MobileNav from './mobile-nav';
 
 const Nav = () => {
+  // get current route
   const pathname = usePathname();
-  console.log(pathname);
+
   return (
-    <nav className='text-white'>
+    <nav className='flex justify-between text-white'>
       <ul className='hidden items-center justify-between gap-10 text-xl font-extrabold md:flex'>
         {navLinks.map((link, index) => (
           <li key={index}>
@@ -26,6 +28,7 @@ const Nav = () => {
           </li>
         ))}
       </ul>
+      <MobileNav />
     </nav>
   );
 };

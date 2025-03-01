@@ -1,11 +1,8 @@
+import MainContainer from '@/components/main-container';
 import React from 'react';
 
 const SalesPage = () => {
-  return (
-    <main className='flex items-center justify-center bg-black py-20 text-6xl font-bold text-white'>
-      SalesPage
-    </main>
-  );
+  return <MainContainer>SalesPage</MainContainer>;
 };
 
 export default SalesPage;

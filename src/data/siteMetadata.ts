@@ -20,7 +20,8 @@ const siteMetadata = {
 
   email: "accounts@jmrentals.net",
 
-  address: "30010 MB-216, Grunthal, MB R0A 0R0, Canada",
+  //   address: "30010 MB-216, Grunthal, MB R0A 0R0, Canada",
+  address: "30010 PR 216, Grunthal MB, R0A 0R0",
   addressLink: "https://maps.app.goo.gl/jwbKt7tbDQGWL4H1A",
 };
 

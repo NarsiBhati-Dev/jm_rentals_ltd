@@ -1,11 +1,8 @@
-import React from "react";
+import React from 'react';
+import MainContainer from '@/components/main-container';
 
 const ContactPage = () => {
-  return (
-    <main className="flex justify-center text-6xl font-bold text-white bg-black items-center py-20">
-      ContactPage
-    </main>
-  );
+  return <MainContainer>ContactPage</MainContainer>;
 };
 
 export default ContactPage;

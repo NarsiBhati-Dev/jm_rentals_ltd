@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const RentalsPage = () => {
   return (
-    <main className="flex justify-center text-6xl font-bold text-white bg-black items-center py-20">
+    <main className='flex items-center justify-center bg-black py-20 text-6xl font-bold text-white'>
       RentalsPage
     </main>
   );

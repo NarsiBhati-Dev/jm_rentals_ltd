@@ -13,6 +13,15 @@ const siteMetadata = {
   locale: "en-US",
 
   socialBanner: `${SITE_URL}/images/jmb-social-banner.png`,
+
+  //   contact
+  tel: "+12044346755",
+  phone: "+1 (204) 434-6755",
+
+  email: "accounts@jmrentals.net",
+
+  address: "30010 MB-216, Grunthal, MB R0A 0R0, Canada",
+  addressLink: "https://maps.app.goo.gl/jwbKt7tbDQGWL4H1A",
 };
 
 export default siteMetadata;

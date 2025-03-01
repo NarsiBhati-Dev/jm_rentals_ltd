@@ -12,7 +12,7 @@ const HeroSection = () => {
           alt='J&M Rentals'
           width={2560}
           height={699}
-          className='aspect-auto h-[65vh] object-center md:aspect-[16/9] md:h-[75vh] md:max-w-full'
+          className='aspect-auto min-h-[70vh] max-w-full object-center md:aspect-[16/9] md:h-[75vh] md:max-w-full'
           priority
         />
 

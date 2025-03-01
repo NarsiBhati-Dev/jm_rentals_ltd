@@ -1,4 +1,4 @@
-import MainContainer from '@/components/main-container';
+import MainContainer from '@/components/section-container';
 import React from 'react';
 
 const SalesPage = () => {

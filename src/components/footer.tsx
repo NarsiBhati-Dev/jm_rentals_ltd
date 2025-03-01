@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo & Description */}
         <div className='mx-auto max-w-82 text-center md:text-left'>
           <Logo />
-          <p className='mt-4 text-justify text-xl text-gray-400'>
+          <p className='mt-4 text-justify text-lg text-gray-300 md:text-xl'>
             Equipment rentals are available at minimum, daily, weekly, and
             monthly rates, giving you the flexibility to rent the tool you need
             for the day or the entire project.
@@ -18,10 +18,10 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className='mx-auto mt-4 max-w-80 text-center md:mt-20 md:max-w-2xl md:text-left'>
-          <h5 className='text-lg font-semibold text-white'>
+          <h5 className='text-2xl font-semibold text-white'>
             Need Equipment? Let’s Talk!
           </h5>
-          <p className='mt-2 text-justify text-base text-gray-300'>
+          <p className='mt-4 text-justify text-lg text-gray-300 md:text-xl'>
             Get in touch with <strong>J&M Rentals Ltd.</strong> for equipment
             availability and pricing. We offer flexible rental options to suit
             your needs.

@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { Geist, Geist_Mono } from "next/font/google";
+import siteMetadata from "@/data/siteMetadata";
 
-const geistSans = Geist({
+export const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+export const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -15,10 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default: "J&M Rentals | Tool & Equipment Rentals in Grunthal, Manitoba",
-    template: `%s | J&M Rentals`,
+    template: `%s | ${siteMetadata.title}`,
   },
-  description:
-    "J&M Rentals Ltd. offers high-quality tool and equipment rentals in Grunthal, Manitoba. We specialize in lawn & garden equipment, scissor lifts, and earthmoving machinery—perfect for homeowners and contractors alike.",
+  description: siteMetadata.description,
 };
 
 export default function RootLayout({
@@ -27,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang={siteMetadata.language}>
       <head>
         <link
           rel="icon"
@@ -46,9 +48,11 @@ export default function RootLayout({
         <link rel="manifest" href="/favicons/site.webmanifest" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

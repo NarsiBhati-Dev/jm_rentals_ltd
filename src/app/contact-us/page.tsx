@@ -16,33 +16,27 @@ const ContactPage = () => {
     <main className='page-animation px-2 py-4 md:px-4 md:py-6'>
       <SectionContainer className='flex flex-col items-center justify-between gap-4 rounded-lg bg-white p-4 shadow-lg md:flex-row md:gap-6 md:p-6'>
         {/* Left & Right Sections Wrapper */}
-        <div className='flex w-full flex-col gap-4 md:flex-row md:gap-6'>
+        <section className='flex w-full flex-col gap-4 md:flex-row md:gap-6'>
           {/* Left Section - Contact Info & Winter Hours */}
-          <div className='flex w-full flex-1 flex-col gap-4 rounded-md bg-blue-50 md:gap-6'>
+          <section className='z-0 flex w-full flex-1 flex-col gap-4 rounded-md bg-blue-50 md:gap-6'>
             {/* Contact Info */}
-            <div className='flex aspect-[16/9] flex-1 flex-col items-center justify-center rounded-lg px-3 py-2 text-center md:items-start md:px-6 md:py-6 md:text-left'>
+            <section className='flex flex-1 flex-col items-center justify-center rounded-md px-3 py-2 text-center md:items-start md:px-6 md:py-6 md:text-left'>
               <h2 className='pb-2 text-2xl font-bold text-gray-900 md:pb-4 md:text-4xl'>
                 Contact Us
               </h2>
-              <div className='flex w-full flex-col gap-2 text-gray-700 md:gap-4'>
+
+              {/* Contact List in a Single Row */}
+              <section className='grid w-full grid-cols-1 gap-4'>
                 {ContactsData.map((contact, index) => (
-                  <div
+                  <Contacts
                     key={index}
-                    className='flex w-full items-center gap-3 rounded-lg bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-3 shadow-md transition-all duration-300 md:hover:from-gray-200 md:hover:to-gray-300 md:hover:shadow-xl'
-                  >
-                    <Contacts
-                      kind={contact.type as Kind}
-                      href={contact.href}
-                      className='group'
-                    >
-                      <span className='text-sm font-bold text-gray-900 transition-all duration-300 group-hover:translate-x-1 md:text-lg'>
-                        {contact.title}
-                      </span>
-                    </Contacts>
-                  </div>
+                    kind={contact.type as Kind}
+                    href={contact.href}
+                    title={contact.title}
+                  />
                 ))}
-              </div>
-            </div>
+              </section>
+            </section>
 
             {/* Winter Hours */}
             <div className='flex flex-1 flex-col items-center justify-center rounded-md px-3 py-2 text-center md:items-start md:px-6 md:py-6 md:text-left'>
@@ -61,7 +55,7 @@ const ContactPage = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </section>
 
           {/* Right Section - Image & Map (Inside One Div) */}
           <div className='flex flex-1 flex-col items-center justify-center gap-4 md:gap-6'>
@@ -75,7 +69,7 @@ const ContactPage = () => {
             />
             <GoogleMap />
           </div>
-        </div>
+        </section>
       </SectionContainer>
     </main>
   );

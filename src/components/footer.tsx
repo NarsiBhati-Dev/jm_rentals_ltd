@@ -6,7 +6,7 @@ import PDFIcon from '@/data/icons/pdf';
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-900 px-6 py-4 text-white'>
+    <footer className='bg-background px-6 py-4 text-white'>
       <section className='flex flex-col items-center gap-6 md:flex-row md:justify-between'>
         {/* Logo & Description */}
         <section className='mx-auto max-w-82 text-center md:text-left'>

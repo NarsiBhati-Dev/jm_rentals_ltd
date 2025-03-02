@@ -14,7 +14,7 @@ export default function Home() {
         <h2 className='mt-6 text-3xl font-bold text-gray-200 md:text-4xl'>
           Explore Our Equipment
         </h2>
-        <p className='mx-auto mt-2 max-w-2xl text-lg text-gray-400'>
+        <p className='mx-auto mt-4 max-w-2xl text-center text-lg text-gray-400'>
           Whether you’re looking for construction machinery, industrial tools,
           or reliable trailers, we offer top-tier equipment to support your
           projects with efficiency and durability.

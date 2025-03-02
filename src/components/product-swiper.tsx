@@ -31,7 +31,7 @@ export default function InfiniteSwiper() {
             width={1920}
             height={1080}
             priority
-            className='h-[400px] w-full rounded-md object-cover object-center md:h-[600px]'
+            className='h-[370px] w-full rounded-md object-center md:h-[700px] md:object-cover'
           />
         </SwiperSlide>
       ))}

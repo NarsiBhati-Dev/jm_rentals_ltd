@@ -11,12 +11,12 @@ export type Kind = keyof typeof ContactsIcons;
 
 interface ContactsProps {
   kind: Kind;
-  children: React.ReactNode;
-  className?: string;
   href: string;
+  title: string;
+  className?: string;
 }
 
-const Contacts = ({ kind, children, className, href = '/' }: ContactsProps) => {
+const Contacts = ({ kind, href, title, className }: ContactsProps) => {
   const ContactSvg = ContactsIcons[kind];
 
   if (!ContactSvg) {
@@ -24,14 +24,17 @@ const Contacts = ({ kind, children, className, href = '/' }: ContactsProps) => {
   }
 
   return (
-    <div
-      className={`flex items-center justify-between gap-4 text-lg text-white md:text-black ${className}`}
+    <a
+      href={href}
+      target='_blank'
+      rel='noopener noreferrer'
+      className={`flex items-center gap-6 rounded-lg bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-3 shadow-md transition-all duration-300 hover:from-gray-200 hover:to-gray-300 hover:shadow-xl ${className}`}
     >
       <ContactSvg />
-      <a href={href} className='text-primary underline hover:text-amber-800'>
-        {children}
-      </a>
-    </div>
+      <span className='decoration-primary truncate text-sm font-bold text-gray-900 underline transition-all duration-300 hover:translate-x-1 md:text-lg'>
+        {title}
+      </span>
+    </a>
   );
 };
 

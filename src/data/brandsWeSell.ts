@@ -21,7 +21,7 @@ export const dealersOf = [
   { brandName: 'PJ TRAILERS', logo: '/images/brands/PJ_TRAILERS.png' },
 ];
 
-export const ProductImages = [
+export const SalesProductImages = [
   { image: '/images/sales/EQUIPMENT_SALES/EQUIPMENT_SALES-1.png' },
   { image: '/images/sales/EQUIPMENT_SALES/EQUIPMENT_SALES-2.png' },
   { image: '/images/sales/EQUIPMENT_SALES/EQUIPMENT_SALES-3.png' },

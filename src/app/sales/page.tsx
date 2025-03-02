@@ -1,6 +1,10 @@
 import React from 'react';
 import Image from 'next/legacy/image';
-import { brandsWeSell, dealersOf, ProductImages } from '@/data/brandsWeSell';
+import {
+  brandsWeSell,
+  dealersOf,
+  SalesProductImages,
+} from '@/data/brandsWeSell';
 import Link from 'next/link';
 
 const SalesPage = () => {
@@ -101,13 +105,15 @@ const SalesPage = () => {
             <h2 className='text-3xl font-bold text-white md:text-4xl'>
               Our Products
             </h2>
-            <p className='mt-2 text-lg text-gray-400'>
-              Explore our wide range of heavy equipment and trailers for sale.
+            <p className='mx-auto mt-2 max-w-4xl text-lg text-gray-400'>
+              Find high-quality construction machinery, industrial tools, and
+              reliable trailers designed to enhance efficiency and durability
+              for your projects.
             </p>
 
             {/* Products Grid */}
             <div className='mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-              {ProductImages.map((product, index) => (
+              {SalesProductImages.map((product, index) => (
                 <div
                   key={index}
                   className='group overflow-hidden rounded-md shadow-lg transition-transform md:hover:scale-105'

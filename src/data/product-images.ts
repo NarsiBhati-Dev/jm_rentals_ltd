@@ -1,0 +1,16 @@
+export const ProductImages = [
+  { image: '/images/Home/Product-1.webp' },
+  { image: '/images/Home/Product-2.webp' },
+  { image: '/images/Home/Product-3.webp' },
+  { image: '/images/Home/Product-4.webp' },
+  { image: '/images/Home/Product-5.webp' },
+  { image: '/images/Home/Product-6.webp' },
+  { image: '/images/Home/Product-7.webp' },
+  { image: '/images/Home/Product-8.webp' },
+  { image: '/images/Home/Product-9.webp' },
+  { image: '/images/Home/Product-10.webp' },
+  { image: '/images/Home/Product-11.webp' },
+  { image: '/images/Home/Product-12.webp' },
+  { image: '/images/Home/Product-13.webp' },
+  { image: '/images/Home/Product-14.webp' },
+];

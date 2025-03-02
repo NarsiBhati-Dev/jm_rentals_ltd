@@ -18,9 +18,9 @@ const Footer = () => {
 
         {/* Contact Info */}
         <section className='mx-auto mt-4 max-w-80 text-center md:mt-20 md:max-w-2xl md:text-left'>
-          <h5 className='text-2xl font-semibold text-white'>
+          <h2 className='text-2xl font-semibold text-white'>
             Need Equipment? Let’s Talk!
-          </h5>
+          </h2>
           <p className='mt-4 text-justify text-lg text-gray-300 md:text-xl'>
             Get in touch with <strong>J&M Rentals Ltd.</strong> for equipment
             availability and pricing. We offer flexible rental options to suit

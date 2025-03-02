@@ -10,7 +10,7 @@ const SectionContainer = ({ children, className }: SectionContainerProps) => {
   return (
     <main
       className={clsx(
-        'mx-auto my-auto mt-28 max-w-7xl py-5 md:max-h-[90vh]',
+        'mx-auto my-auto mt-20 max-w-7xl md:max-h-[90vh]',
         className,
       )}
     >

@@ -13,12 +13,12 @@ const HeroSection = () => {
           width={2560}
           height={699}
           className='aspect-auto min-h-[70vh] max-w-full object-center md:aspect-[16/9] md:h-[75vh] md:max-w-full'
-          priority
+          priority={true}
         />
 
         {/* Text Overlay */}
         <div className='absolute inset-0 mx-2 my-4 flex max-h-[489px] max-w-[600px] flex-col items-center rounded-lg bg-[#E0E0E0F5] px-4 pt-18 md:mx-auto md:my-auto md:px-20'>
-          <h2 className='py-4 text-7xl font-extrabold drop-shadow-lg'>
+          <h2 className='py-4 text-7xl font-extrabold tracking-tight drop-shadow-lg'>
             Welcome
           </h2>
           <p className='mt-4 text-center text-lg drop-shadow'>

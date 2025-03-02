@@ -19,7 +19,7 @@ const Nav = () => {
             <Link
               href={link.path}
               className={clsx(
-                'cursor-pointer hover:text-amber-800',
+                'hover:text-secondary cursor-pointer',
                 pathname === link.path && 'text-primary underline',
               )}
             >

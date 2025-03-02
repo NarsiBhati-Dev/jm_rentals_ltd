@@ -1,8 +1,12 @@
-import MainContainer from '@/components/section-container';
+import SectionContainer from '@/components/section-container';
 import React from 'react';
 
 const RentalsPage = () => {
-  return <MainContainer>RentalsPage</MainContainer>;
+  return (
+    <SectionContainer className='flex items-center justify-center p-6 text-5xl font-bold text-white md:p-8'>
+      RentalsPage
+    </SectionContainer>
+  );
 };
 
 export default RentalsPage;

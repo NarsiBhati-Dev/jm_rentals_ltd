@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { brandsWeSell, dealersOf, ProductImages } from '@/data/brandsWeSell';
 import Link from 'next/link';
 
 const SalesPage = () => {
   return (
-    <main className='px-4 py-6 md:px-8 md:py-12'>
+    <main className='px-4 py-6 md:py-20'>
       {/* Hero Section */}
       <section className='relative h-[80vh] bg-gray-900'>
         <Image
@@ -58,8 +58,8 @@ const SalesPage = () => {
                 <Image
                   src={brand.logo}
                   alt={brand.brandName}
-                  width={120}
-                  height={60}
+                  width={140}
+                  height={80}
                   className='h-auto w-auto'
                 />
               </div>
@@ -87,8 +87,8 @@ const SalesPage = () => {
                 <Image
                   src={dealer.logo}
                   alt={dealer.brandName}
-                  width={120}
-                  height={60}
+                  width={140}
+                  height={80}
                   className='h-auto w-auto'
                 />
               </div>
@@ -106,18 +106,18 @@ const SalesPage = () => {
             </p>
 
             {/* Products Grid */}
-            <div className='mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3'>
+            <div className='mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
               {ProductImages.map((product, index) => (
                 <div
                   key={index}
-                  className='group overflow-hidden rounded-lg shadow-lg transition-transform md:hover:scale-105'
+                  className='group overflow-hidden rounded-md shadow-lg transition-transform md:hover:scale-105'
                 >
                   <Image
                     src={product.image}
                     alt={`Product ${index + 1}`}
                     width={400}
                     height={300}
-                    className='h-full w-full object-cover'
+                    className='h-full w-full rounded-md object-center'
                   />
                 </div>
               ))}

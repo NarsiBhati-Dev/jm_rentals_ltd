@@ -1,6 +1,5 @@
 import React from 'react';
 import { Location, Email, Phone } from '@/data/icons/contact-us-icons';
-import Link from 'next/link';
 
 const ContactsIcons = {
   location: Location,
@@ -29,9 +28,9 @@ const Contacts = ({ kind, children, className, href = '/' }: ContactsProps) => {
       className={`flex items-center justify-between gap-4 text-lg text-white md:text-black ${className}`}
     >
       <ContactSvg />
-      <Link href={href} className='text-primary underline hover:text-amber-800'>
+      <a href={href} className='text-primary underline hover:text-amber-800'>
         {children}
-      </Link>
+      </a>
     </div>
   );
 };

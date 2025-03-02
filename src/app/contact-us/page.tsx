@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleMap from '@/components/google-map';
 import SectionContainer from '@/components/section-container';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import ContactsData from '@/data/contactsData';
 import Contacts, { Kind } from '@/components/contacts';
 
@@ -49,7 +49,7 @@ const ContactPage = () => {
               <h3 className='pb-2 text-2xl font-bold text-gray-900 md:pb-4 md:text-4xl'>
                 Winter Hours
               </h3>
-              <ul className='w-full space-y-2 text-base font-bold text-gray-700 md:space-y-3 md:text-lg'>
+              <ul className='w-full space-y-2 text-base font-bold text-gray-800 md:space-y-3 md:text-lg'>
                 {winterHours.map((item, index) => (
                   <li
                     key={index}
@@ -69,7 +69,7 @@ const ContactPage = () => {
               src='/images/Home/img-9.webp'
               alt='Contact us image'
               width={600}
-              height={280}
+              height={350}
               priority
               className='w-full max-w-xl rounded-md'
             />

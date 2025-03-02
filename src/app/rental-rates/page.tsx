@@ -5,7 +5,7 @@ const RentalRatesPage = () => {
   const pdfUrl = '/RentalRates_2024.pdf';
 
   return (
-    <div className='mx-auto px-4 py-16 text-center'>
+    <div className='page-animation mx-auto px-4 py-16 text-center'>
       <h1 className='mb-4 text-2xl font-bold'>Rental Rates 2024</h1>
 
       {/* PDF Embed */}

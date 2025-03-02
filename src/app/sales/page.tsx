@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const SalesPage = () => {
   return (
-    <main className='px-4 py-6 md:py-20'>
+    <main className='page-animation px-4 py-6 md:py-20'>
       {/* Hero Section */}
       <section className='relative h-[80vh] bg-gray-900'>
         <Image

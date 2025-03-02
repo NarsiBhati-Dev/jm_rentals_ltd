@@ -21,16 +21,16 @@ export default function InfiniteSwiper() {
       navigation
       pagination={{ clickable: true }} // Enables pagination dots
       modules={[Autoplay, Pagination, Navigation]} // Use necessary modules
-      className='mt-8 h-fit w-full max-w-6xl rounded-md shadow'
+      className='mx-auto mt-8 h-fit w-full max-w-7xl rounded-md shadow'
     >
       {ProductImages.map((src, index) => (
         <SwiperSlide key={index}>
           <Image
             src={src.image}
             alt={`Slide ${index}`}
-            width={818}
-            height={600}
-            className='h-[300px] w-full rounded-md object-cover md:h-[600px]'
+            width={1920}
+            height={1080}
+            className='h-[400px] w-full rounded-md object-cover md:h-[600px]'
           />
         </SwiperSlide>
       ))}

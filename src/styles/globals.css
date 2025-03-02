@@ -5,3 +5,18 @@
   --color-primary-dark: #b51d2a;
   --color-secondary: #444444;
 }
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-animation {
+  animation: slide-up 0.5s ease-out;
+}

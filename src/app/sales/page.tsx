@@ -123,8 +123,8 @@ const SalesPage = () => {
                     src={product.image}
                     alt={`Product ${index + 1}`}
                     width={400}
-                    height={300}
-                    className='h-[180px] w-full rounded-md object-cover object-center'
+                    height={225}
+                    className='aspect-[16/9] w-full rounded-md object-cover'
                   />
                 </div>
               ))}

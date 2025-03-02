@@ -8,9 +8,9 @@ export const brandsWeSell = [
     logo: '/images/brands/DIAMOND_PRODUCTS.png',
   },
   { brandName: 'HONDA ENGINES', logo: '/images/brands/HONDA_ENGINES.png' },
-  { brandName: 'YAMAHA', logo: '/images/brands/YAMAHA.png' },
-  { brandName: 'KODIAK', logo: '/images/brands/KODIAK.png' },
   { brandName: 'TOPCON', logo: '/images/brands/TOPCON.png' },
+  { brandName: 'KODIAK', logo: '/images/brands/KODIAK.png' },
+  { brandName: 'YAMAHA', logo: '/images/brands/YAMAHA.png' },
 ];
 
 export const dealersOf = [

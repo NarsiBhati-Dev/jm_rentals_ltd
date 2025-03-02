@@ -1,7 +1,7 @@
 import React from 'react';
 import CtaButton from './cta-button';
 import { CTALinks } from '@/data/ctaLinks';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 const HomeCTA = () => {
   return (
@@ -27,7 +27,7 @@ const HomeCTA = () => {
                 alt={CTA.title}
                 width={370}
                 height={200}
-                className='h-auto w-auto rounded-t-md'
+                className='h-[200px] w-[370px] rounded-t-md object-cover'
               />
               <div className='px-4 py-4 text-center'>
                 <p className='mt-2 text-sm text-gray-400'>{CTA.description}</p>

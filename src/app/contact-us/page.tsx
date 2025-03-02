@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleMap from '@/components/google-map';
 import SectionContainer from '@/components/section-container';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import ContactsData from '@/data/contactsData';
 import Contacts, { Kind } from '@/components/contacts';
 
@@ -66,7 +66,7 @@ const ContactPage = () => {
           {/* Right Section - Image & Map (Inside One Div) */}
           <div className='flex flex-1 flex-col items-center justify-center gap-4 md:gap-6'>
             <Image
-              src='/images/Home/img-9.webp'
+              src='/images/Home/Product-14.webp'
               alt='Contact us image'
               width={600}
               height={350}

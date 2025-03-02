@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import {
   brandsWeSell,
   dealersOf,
@@ -9,16 +9,15 @@ import Link from 'next/link';
 
 const SalesPage = () => {
   return (
-    <main className='page-animation px-4 py-6 md:py-20'>
+    <main className='page-animation mt-20 px-4 py-6'>
       {/* Hero Section */}
       <section className='relative h-[80vh] bg-gray-900'>
         <Image
-          src='/images/Home/img-4.webp'
+          src='/images/Home/Product-9.webp'
           alt='Heavy Equipment Sales'
-          layout='fill'
-          objectFit='cover'
+          fill
           priority
-          className='opacity-30'
+          className='absolute inset-0 max-h-[65vh] object-cover object-center opacity-30 md:max-h-[90vh]'
         />
 
         <div className='absolute inset-0 flex flex-col items-center justify-center text-center text-white'>
@@ -57,14 +56,15 @@ const SalesPage = () => {
             {brandsWeSell.map((brand, index) => (
               <div
                 key={index}
-                className='flex items-center justify-center rounded-lg bg-white p-4 shadow-md transition-all md:hover:scale-105 md:hover:shadow-lg'
+                className='flex h-[150px] items-center justify-center rounded-lg bg-white p-4 shadow-md transition-all md:hover:scale-105 md:hover:shadow-lg lg:h-[200px]'
               >
                 <Image
                   src={brand.logo}
                   alt={brand.brandName}
                   width={140}
-                  height={80}
-                  className='h-auto w-auto'
+                  height={70}
+                  priority
+                  className='h-auto w-auto object-cover object-center'
                 />
               </div>
             ))}
@@ -91,9 +91,10 @@ const SalesPage = () => {
                 <Image
                   src={dealer.logo}
                   alt={dealer.brandName}
+                  priority
                   width={140}
-                  height={80}
-                  className='h-auto w-auto'
+                  height={70}
+                  className='h-auto w-auto object-cover object-center'
                 />
               </div>
             ))}
@@ -112,7 +113,7 @@ const SalesPage = () => {
             </p>
 
             {/* Products Grid */}
-            <div className='mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+            <div className='mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3'>
               {SalesProductImages.map((product, index) => (
                 <div
                   key={index}
@@ -123,7 +124,7 @@ const SalesPage = () => {
                     alt={`Product ${index + 1}`}
                     width={400}
                     height={300}
-                    className='h-full w-full rounded-md object-center'
+                    className='h-[180px] w-full rounded-md object-cover object-center'
                   />
                 </div>
               ))}

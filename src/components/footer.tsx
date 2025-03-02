@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from './logo';
 import siteMetadata from '@/data/siteMetadata';
+import { Phone } from '@/data/icons/contact-us-icons';
+import PDFIcon from '@/data/icons/pdf';
 
 const Footer = () => {
   return (
@@ -31,20 +33,20 @@ const Footer = () => {
           <section className='mt-4 flex flex-col items-start justify-start gap-4 space-y-3 md:flex-row md:items-start'>
             <a
               href={`tel:${siteMetadata.tel}`}
-              className='w-full rounded-lg bg-amber-500 px-6 py-3 font-medium text-white shadow-md transition-all hover:bg-amber-600 md:w-auto'
+              className='flex w-full items-center gap-6 rounded-lg bg-amber-500 px-6 py-3 font-medium text-white shadow-md transition-all hover:bg-amber-600 md:w-auto md:justify-center'
               aria-label={`Call J&M Rentals at ${siteMetadata.tel}`}
               title='Call J&M Rentals'
             >
-              📞 Call Us: {siteMetadata.phone}
+              <Phone color={'white'} /> Call Us: {siteMetadata.phone}
             </a>
 
             <a
               href='/rental-rates'
-              className='w-full rounded-lg bg-gray-700 px-6 py-3 font-medium text-white shadow-md transition-all hover:bg-gray-800 md:w-auto'
+              className='flex w-full items-center gap-6 rounded-lg bg-gray-700 px-6 py-3 font-medium text-white shadow-md transition-all hover:bg-gray-800 md:w-auto md:justify-center'
               aria-label='View rental rates for 2024'
               title='View Rental Rates'
             >
-              📋 View Rental Rates
+              <PDFIcon /> View Rental Rates
             </a>
           </section>
         </section>

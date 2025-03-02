@@ -48,7 +48,7 @@ export default function RootLayout({
         <link rel='manifest' href='/favicons/site.webmanifest' />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-black antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} scroll-smooth bg-black antialiased`}
       >
         <Header />
         {children}

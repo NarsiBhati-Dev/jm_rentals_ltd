@@ -13,7 +13,7 @@ const winterHours = [
 
 const ContactPage = () => {
   return (
-    <main className='page-animation px-2 py-4 md:px-4 md:py-6'>
+    <main className='md:page-animation px-2 py-4 md:px-4 md:py-6'>
       <SectionContainer className='bg-background flex flex-col items-center justify-between gap-4 rounded-lg p-4 shadow-lg md:flex-row md:gap-6 md:p-6'>
         {/* Left & Right Sections Wrapper */}
         <section className='flex w-full flex-col gap-4 md:flex-row md:gap-6'>
@@ -26,7 +26,7 @@ const ContactPage = () => {
               </h2>
 
               {/* Contact List */}
-              <section className='grid w-full grid-cols-1 gap-4'>
+              <address className='grid w-full grid-cols-1 gap-4'>
                 {ContactsData.map((contact, index) => (
                   <Contacts
                     key={index}
@@ -35,11 +35,11 @@ const ContactPage = () => {
                     title={contact.title}
                   />
                 ))}
-              </section>
+              </address>
             </section>
 
             {/* Winter Hours */}
-            <div className='flex flex-1 flex-col items-center justify-center rounded-md px-3 py-2 text-center md:items-start md:px-6 md:py-6 md:text-left'>
+            <section className='flex flex-1 flex-col items-center justify-center rounded-md px-3 py-2 text-center md:items-start md:px-6 md:py-6 md:text-left'>
               <h3 className='pb-2 text-3xl font-bold tracking-tighter text-gray-900 md:pb-4 md:text-5xl'>
                 Winter Hours
               </h3>
@@ -54,11 +54,11 @@ const ContactPage = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </section>
           </section>
 
           {/* Right Section - Image & Map */}
-          <div className='flex flex-1 flex-col items-center justify-center gap-4 md:gap-6'>
+          <section className='flex flex-1 flex-col items-center justify-center gap-4 md:gap-6'>
             <Image
               src='/images/Home/Product-14.webp'
               alt='Contact us image'
@@ -68,7 +68,7 @@ const ContactPage = () => {
               className='w-full max-w-2xl rounded-md border border-white'
             />
             <GoogleMap />
-          </div>
+          </section>
         </section>
       </SectionContainer>
     </main>

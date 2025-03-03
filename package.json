@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "lint:fix": "next lint --fix && prettier --write ."
+    "lint:fix": "next lint --fix && prettier --write .",
+    "test": "next build && bun next start"
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
@@ -16,7 +17,6 @@
     "next": "15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-modal": "^3.16.3",
     "swiper": "^11.2.4"
   },
   "devDependencies": {
@@ -26,7 +26,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/react-modal": "^3.16.3",
     "@typescript-eslint/eslint-plugin": "^8.25.0",
     "@typescript-eslint/parser": "^8.25.0",
     "eslint": "^9",

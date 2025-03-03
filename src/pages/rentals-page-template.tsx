@@ -1,6 +1,7 @@
 import CategoryCard, { type Equipment } from '@/components/category-card';
 import React from 'react';
 import Image from 'next/image';
+import RentalsCtaButton from '@/components/rentals-cta-button';
 
 interface RentalsPageTemplateProps {
   pageTitle: string;
@@ -14,7 +15,7 @@ const RentalsPageTemplate = ({
   pageEquipments,
 }: RentalsPageTemplateProps) => {
   return (
-    <section className='page-animation container mx-auto mt-20 mb-12 rounded-md px-6 py-8 text-white'>
+    <section className='md:page-animation mx-auto mt-20 mb-12 max-w-7xl rounded-md px-6 py-8 text-white md:px-0'>
       <h1 className='mb-12 border-b-2 border-dashed py-4 text-4xl font-extrabold tracking-tighter md:text-6xl'>
         {pageTitle}
       </h1>
@@ -30,6 +31,8 @@ const RentalsPageTemplate = ({
 
       {/* Equipment Card */}
       <CategoryCard Equipments={pageEquipments} />
+
+      <RentalsCtaButton />
     </section>
   );
 };

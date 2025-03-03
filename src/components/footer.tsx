@@ -10,7 +10,9 @@ const Footer = () => {
       <section className='flex flex-col items-center gap-6 md:flex-row md:justify-between'>
         {/* Logo & Description */}
         <section className='mx-auto max-w-82 text-center md:text-left'>
-          <Logo />
+          <header>
+            <Logo />
+          </header>
           <p className='mt-4 text-justify text-lg text-gray-300 md:text-xl'>
             Equipment rentals are available at minimum, daily, weekly, and
             monthly rates, giving you the flexibility to rent the tool you need
@@ -19,7 +21,7 @@ const Footer = () => {
         </section>
 
         {/* Contact Info */}
-        <section className='mx-auto mt-4 max-w-80 text-center md:mt-20 md:max-w-2xl md:text-left'>
+        <address className='mx-auto mt-4 max-w-80 text-center not-italic md:mt-20 md:max-w-2xl md:text-left'>
           <h2 className='text-2xl font-semibold text-white'>
             Need Equipment? Let’s Talk!
           </h2>
@@ -33,7 +35,7 @@ const Footer = () => {
           <section className='mt-4 flex flex-col items-start justify-start gap-4 space-y-3 md:flex-row md:items-start'>
             <a
               href={`tel:${siteMetadata.tel}`}
-              className='flex w-full items-center gap-6 rounded-lg bg-amber-500 px-6 py-3 font-medium text-white shadow-md transition-all hover:bg-amber-600 md:w-auto md:justify-center'
+              className='flex w-full items-center gap-6 rounded-lg bg-amber-500 px-6 py-3 font-bold text-white shadow-md transition-all hover:bg-amber-600 md:w-auto md:justify-center'
               aria-label={`Call J&M Rentals at ${siteMetadata.tel}`}
               title='Call J&M Rentals'
             >
@@ -42,26 +44,28 @@ const Footer = () => {
 
             <a
               href='/rental-rates'
-              className='flex w-full items-center gap-6 rounded-lg bg-gray-700 px-6 py-3 font-medium text-white shadow-md transition-all hover:bg-gray-800 md:w-auto md:justify-center'
+              className='flex w-full items-center gap-6 rounded-lg bg-gray-700 px-6 py-3 font-bold text-white shadow-md transition-all hover:bg-gray-800 md:w-auto md:justify-center'
               aria-label='View rental rates for 2024'
               title='View Rental Rates'
             >
               <PDFIcon /> View Rental Rates
             </a>
           </section>
-        </section>
+        </address>
       </section>
 
       {/* Footer Credit */}
       <section className='my-8 border-t border-gray-700 py-2 text-center text-[16px] text-gray-400'>
-        <p className='py-2'>
-          &copy; {new Date().getFullYear()} J&M Rentals Ltd. All rights
-          reserved.
-        </p>
-        <p>
-          Developed with ❤️ by{'  '}
-          <span className='font-semibold'>{siteMetadata.developer}</span>
-        </p>
+        <small>
+          <p className='py-2'>
+            &copy; {new Date().getFullYear()} J&M Rentals Ltd. All rights
+            reserved.
+          </p>
+          <p>
+            Developed with ❤️ by{' '}
+            <span className='font-semibold'>{siteMetadata.developer}</span>
+          </p>
+        </small>
       </section>
     </footer>
   );

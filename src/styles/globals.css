@@ -19,7 +19,7 @@
 }
 
 .page-animation {
-  animation: slide-up 1s ease-out;
+  animation: slide-up 0.5s ease-out;
 }
 
 h1,

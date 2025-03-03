@@ -9,9 +9,9 @@ import Link from 'next/link';
 
 const SalesPage = () => {
   return (
-    <main className='page-animation mt-20 px-4 py-6'>
+    <main className='md:page-animation mt-20 px-4 py-6'>
       {/* Hero Section */}
-      <section className='relative h-[80vh] bg-gray-900'>
+      <section className='relative h-[65vh] md:h-[80vh]'>
         <Image
           src='/images/Home/Product-9.webp'
           alt='Heavy Equipment Sales'
@@ -117,7 +117,7 @@ const SalesPage = () => {
               {SalesProductImages.map((product, index) => (
                 <div
                   key={index}
-                  className='group overflow-hidden rounded-md shadow-lg transition-transform md:hover:scale-105'
+                  className='group overflow-hidden rounded-md border border-white shadow-lg transition-transform md:hover:scale-105'
                 >
                   <Image
                     src={product.image}

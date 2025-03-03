@@ -7,12 +7,12 @@ const ContactsData = [
     type: 'location',
   },
   {
-    title: siteMetadata.phone, // Replace with the actual phone number
+    title: siteMetadata.phone,
     href: `tel:${siteMetadata.tel}`,
     type: 'phone',
   },
   {
-    title: siteMetadata.email, // Replace with the actual email
+    title: siteMetadata.email,
     href: `mailto:${siteMetadata.email}`,
     type: 'email',
   },

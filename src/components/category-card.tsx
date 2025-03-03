@@ -19,14 +19,14 @@ const CategoryCard = ({ Equipments }: CategoryCardProps) => {
       {Equipments.map((category, index) => (
         <div
           key={index}
-          className='bg-background w-full rounded-lg p-6 shadow-md md:w-[480px]'
+          className='bg-background w-full rounded-lg p-6 shadow-md'
         >
-          <h2 className='mt-4 font-bold tracking-tighter text-white md:text-3xl'>
+          <h2 className='mt-4 text-xl font-bold tracking-tighter text-white'>
             {category.title}
           </h2>
-          <ul className='mt-2 text-base text-gray-300'>
+          <ul className='mt-5 text-base text-gray-300'>
             {category.items.map((item, idx) => (
-              <li key={idx} className='ml-4 list-disc'>
+              <li key={idx} className='mt-1 ml-4 list-disc'>
                 {item}
               </li>
             ))}

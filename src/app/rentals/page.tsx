@@ -6,10 +6,10 @@ import { RentalCategories } from '@/data/rentals/rentalCategories';
 
 const RentalsPage = () => {
   return (
-    <section className='page-animation mx-auto mt-20 max-w-7xl rounded-md py-10 text-center text-white md:p-8'>
+    <section className='page-animation bg-background mx-auto mt-24 mb-14 max-w-7xl rounded-md py-10 text-center text-white md:p-8'>
       {/* Page Header */}
       <div className='text-center'>
-        <h1 className='text-4xl font-extrabold text-white md:text-5xl'>
+        <h1 className='text-4xl font-extrabold text-white md:text-6xl'>
           RENTAL SERVICES
         </h1>
         <p className='mt-2 text-sm text-gray-300 md:text-xl'>

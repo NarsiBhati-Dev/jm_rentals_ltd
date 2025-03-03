@@ -7,18 +7,18 @@ export const RentalCategories = [
     image: '/images/rentals/small-construction.png',
   },
   {
-    title: 'LAWN & GARDEN',
-    description:
-      'Tillers, Aerators, Sweepers, Stump Grinder, Wood Chipper & more!',
-    href: 'rentals/lawn-garden',
-    image: '/images/rentals/small-lawn-garden.png',
-  },
-  {
     title: 'HEAVY EQUIPMENT',
     description:
       'Scissor Lifts, Skid Steers with attachments, Man-lift, Trailers',
     href: 'rentals/heavy-equipment',
     image: '/images/rentals/small-heavy-equipment.png',
+  },
+  {
+    title: 'LAWN & GARDEN',
+    description:
+      'Tillers, Aerators, Sweepers, Stump Grinder, Wood Chipper & more!',
+    href: 'rentals/lawn-gardens',
+    image: '/images/rentals/small-lawn-garden.png',
   },
   {
     title: 'MISCELLANEOUS',

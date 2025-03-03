@@ -1,12 +1,15 @@
 import React from 'react';
-import SectionContainer from '@/components/section-container';
+import { ConstructionEquipments } from '@/data/rentals/constructionEquipment';
+import RentalsPageTemplate from '@/pages/rentals-page-template';
 
-const ConstructionEquipmentPage = () => {
+const ConstructionEquipment = () => {
   return (
-    <SectionContainer className='mt-20 flex items-center justify-center py-20 text-2xl font-bold text-white md:text-4xl'>
-      ConstructionEquipmentPage
-    </SectionContainer>
+    <RentalsPageTemplate
+      pageTitle={'CONSTRUCTION EQUIPMENT'}
+      pageImage={'/images/rentals/section-img-1.png'}
+      pageEquipments={ConstructionEquipments}
+    />
   );
 };
 
-export default ConstructionEquipmentPage;
+export default ConstructionEquipment;

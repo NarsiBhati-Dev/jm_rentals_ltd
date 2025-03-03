@@ -14,18 +14,18 @@ const winterHours = [
 const ContactPage = () => {
   return (
     <main className='page-animation px-2 py-4 md:px-4 md:py-6'>
-      <SectionContainer className='flex flex-col items-center justify-between gap-4 rounded-lg bg-white p-4 shadow-lg md:flex-row md:gap-6 md:p-6'>
+      <SectionContainer className='bg-background flex flex-col items-center justify-between gap-4 rounded-lg p-4 shadow-lg md:flex-row md:gap-6 md:p-6'>
         {/* Left & Right Sections Wrapper */}
         <section className='flex w-full flex-col gap-4 md:flex-row md:gap-6'>
           {/* Left Section - Contact Info & Winter Hours */}
           <section className='z-0 flex w-full flex-1 flex-col gap-4 rounded-md bg-blue-50 md:gap-6'>
             {/* Contact Info */}
             <section className='flex flex-1 flex-col items-center justify-center rounded-md px-3 py-2 text-center md:items-start md:px-6 md:py-6 md:text-left'>
-              <h2 className='pb-2 text-2xl font-bold text-gray-900 md:pb-4 md:text-4xl'>
+              <h2 className='pb-2 text-3xl font-bold tracking-tighter text-gray-900 md:pb-4 md:text-5xl'>
                 Contact Us
               </h2>
 
-              {/* Contact List in a Single Row */}
+              {/* Contact List */}
               <section className='grid w-full grid-cols-1 gap-4'>
                 {ContactsData.map((contact, index) => (
                   <Contacts
@@ -40,7 +40,7 @@ const ContactPage = () => {
 
             {/* Winter Hours */}
             <div className='flex flex-1 flex-col items-center justify-center rounded-md px-3 py-2 text-center md:items-start md:px-6 md:py-6 md:text-left'>
-              <h3 className='pb-2 text-2xl font-bold text-gray-900 md:pb-4 md:text-4xl'>
+              <h3 className='pb-2 text-3xl font-bold tracking-tighter text-gray-900 md:pb-4 md:text-5xl'>
                 Winter Hours
               </h3>
               <ul className='w-full space-y-2 text-base font-bold text-gray-800 md:space-y-3 md:text-lg'>
@@ -57,7 +57,7 @@ const ContactPage = () => {
             </div>
           </section>
 
-          {/* Right Section - Image & Map (Inside One Div) */}
+          {/* Right Section - Image & Map */}
           <div className='flex flex-1 flex-col items-center justify-center gap-4 md:gap-6'>
             <Image
               src='/images/Home/Product-14.webp'
@@ -65,7 +65,7 @@ const ContactPage = () => {
               width={600}
               height={350}
               priority
-              className='w-full max-w-xl rounded-md'
+              className='w-full max-w-2xl rounded-md'
             />
             <GoogleMap />
           </div>

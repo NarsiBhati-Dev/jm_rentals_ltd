@@ -19,5 +19,14 @@
 }
 
 .page-animation {
-  animation: slide-up 0.5s ease-out;
+  animation: slide-up 1s ease-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Anton', sans-serif;
 }

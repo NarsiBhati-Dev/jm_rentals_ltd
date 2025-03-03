@@ -25,7 +25,7 @@ const RentalsCard = ({
       {RentalLinks.map((category, index) => (
         <section
           key={index}
-          className='mx-auto flex max-w-[500px] flex-col items-center justify-center rounded-md shadow-md'
+          className='mx-auto flex max-w-[470px] flex-col items-center justify-center rounded-md shadow-md'
         >
           <Image
             src={category.image}
@@ -33,11 +33,13 @@ const RentalsCard = ({
             width={400}
             height={250}
             priority
-            className='aspect-[16/10] h-full w-[500px] rounded-t-md object-cover object-center'
+            className='aspect-auto h-full w-[470px] rounded-t-md object-cover object-center'
           />
 
-          <div className='bg-black px-4 py-4 text-center'>
-            <p className='mt-2 text-sm text-gray-400'>{category.description}</p>
+          <div className='w-full bg-black px-4 py-4 text-center'>
+            <p className='h-100px mt-2 text-sm text-gray-400'>
+              {category.description}
+            </p>
           </div>
           <CtaButton href={category.href}>{category.title}</CtaButton>
         </section>

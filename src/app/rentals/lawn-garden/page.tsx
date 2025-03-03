@@ -1,11 +1,14 @@
-import SectionContainer from '@/components/section-container';
+import { LawnAndGardenEquipments } from '@/data/rentals';
+import RentalsPageTemplate from '@/pages/rentals-page-template';
 import React from 'react';
 
 const LawnGardenPage = () => {
   return (
-    <SectionContainer className='mt-20 flex items-center justify-center py-20 text-2xl font-bold text-white md:text-4xl'>
-      LawnGardenPage
-    </SectionContainer>
+    <RentalsPageTemplate
+      pageTitle={'LAWN & GARDEN EQUIPMENT'}
+      pageImage={'/images/rentals/section-lawn-garden-equipment.png'}
+      pageEquipments={LawnAndGardenEquipments}
+    />
   );
 };
 

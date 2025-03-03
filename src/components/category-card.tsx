@@ -19,9 +19,9 @@ const CategoryCard = ({ Equipments }: CategoryCardProps) => {
       {Equipments.map((category, index) => (
         <div
           key={index}
-          className='bg-background rounded-lg p-6 shadow-md md:w-[450px]'
+          className='bg-background w-full rounded-lg p-6 shadow-md md:w-[480px]'
         >
-          <h2 className='mt-4 text-3xl font-bold text-white'>
+          <h2 className='mt-4 font-bold tracking-tighter text-white md:text-3xl'>
             {category.title}
           </h2>
           <ul className='mt-2 text-base text-gray-300'>

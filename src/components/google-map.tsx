@@ -8,7 +8,7 @@ const GoogleMap = () => {
       height='350'
       title='J&M Rentals Map'
       allowFullScreen
-      className={'w-full rounded-md'}
+      className={'w-full rounded-md border border-white'}
       loading='lazy'
       referrerPolicy={'no-referrer-when-downgrade'}
     ></iframe>

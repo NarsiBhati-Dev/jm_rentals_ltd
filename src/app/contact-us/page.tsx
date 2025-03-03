@@ -65,7 +65,7 @@ const ContactPage = () => {
               width={600}
               height={350}
               priority
-              className='w-full max-w-2xl rounded-md'
+              className='w-full max-w-2xl rounded-md border border-white'
             />
             <GoogleMap />
           </div>

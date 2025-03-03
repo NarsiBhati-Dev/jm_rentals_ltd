@@ -17,8 +17,8 @@ export const RentalCategories = [
     title: 'LAWN & GARDEN',
     description:
       'Tillers, Aerators, Sweepers, Stump Grinder, Wood Chipper & more!',
-    href: 'rentals/lawn-gardens',
-    image: '/images/rentals/small-lawn-garden.png',
+    href: 'rentals/lawn-garden',
+    image: '/images/rentals/small-lawn-gardens.png',
   },
   {
     title: 'MISCELLANEOUS',

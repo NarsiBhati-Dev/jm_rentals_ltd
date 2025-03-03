@@ -1,15 +1,15 @@
 import React from 'react';
-import { ConstructionEquipments } from '@/data/rentals/constructionEquipment';
+import { ConstructionEquipments } from '@/data/rentals';
 import RentalsPageTemplate from '@/pages/rentals-page-template';
 
-const ConstructionEquipment = () => {
+const ConstructionEquipmentPage = () => {
   return (
     <RentalsPageTemplate
       pageTitle={'CONSTRUCTION EQUIPMENT'}
-      pageImage={'/images/rentals/section-img-1.png'}
+      pageImage={'/images/rentals/section-construction-equipment.png'}
       pageEquipments={ConstructionEquipments}
     />
   );
 };
 
-export default ConstructionEquipment;
+export default ConstructionEquipmentPage;

@@ -8,7 +8,7 @@ const ContactsData = [
   },
   {
     title: siteMetadata.phone, // Replace with the actual phone number
-    href: siteMetadata.tel,
+    href: `tel:${siteMetadata.tel}`,
     type: 'phone',
   },
   {

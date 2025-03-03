@@ -14,7 +14,7 @@ const RentalsPageTemplate = ({
   pageEquipments,
 }: RentalsPageTemplateProps) => {
   return (
-    <section className='container mx-auto mt-20 mb-12 rounded-md px-6 py-8 text-white'>
+    <section className='page-animation container mx-auto mt-20 mb-12 rounded-md px-6 py-8 text-white'>
       <h1 className='mb-12 border-b-2 border-dashed py-4 text-4xl font-extrabold tracking-tighter md:text-6xl'>
         {pageTitle}
       </h1>
@@ -25,10 +25,10 @@ const RentalsPageTemplate = ({
         width={200}
         height={200}
         priority
-        className='my-4 aspect-video w-full rounded-md md:h-[60vh] md:py-4'
+        className='my-8 aspect-video w-full rounded-md border border-white md:h-[60vh]'
       />
 
-      {/*  */}
+      {/* Equipment Card */}
       <CategoryCard Equipments={pageEquipments} />
     </section>
   );

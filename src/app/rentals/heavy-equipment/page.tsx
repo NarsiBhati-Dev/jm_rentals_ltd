@@ -1,11 +1,14 @@
-import SectionContainer from '@/components/section-container';
+import { HeavyEquipment } from '@/data/rentals';
+import RentalsPageTemplate from '@/pages/rentals-page-template';
 import React from 'react';
 
 const HeavyEquipmentPage = () => {
   return (
-    <SectionContainer className='mt-20 flex items-center justify-center py-20 text-2xl font-bold text-white md:text-4xl'>
-      HeavyEquipmentPage
-    </SectionContainer>
+    <RentalsPageTemplate
+      pageTitle={'HEAVY EQUIPMENT'}
+      pageImage={'/images/rentals/section-heavy-equipment.png'}
+      pageEquipments={HeavyEquipment}
+    />
   );
 };
 

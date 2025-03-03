@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import PDFIcon from '@/data/icons/pdf';
 import RentalsCard from '@/components/rentals-card';
-import { RentalCategories } from '@/data/rentals/rentalCategories';
+import { RentalCategories } from '@/data/rentals';
 
 const RentalsPage = () => {
   return (

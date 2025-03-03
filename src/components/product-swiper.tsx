@@ -30,7 +30,6 @@ export default function InfiniteSwiper() {
             alt={`Slide ${index}`}
             width={1920}
             height={1080}
-            priority
             className='h-[370px] w-full rounded-md object-center md:h-[700px] md:object-cover'
           />
         </SwiperSlide>

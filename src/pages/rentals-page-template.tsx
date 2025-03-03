@@ -15,14 +15,14 @@ const RentalsPageTemplate = ({
   pageEquipments,
 }: RentalsPageTemplateProps) => {
   return (
-    <section className='md:page-animation mx-auto mt-20 mb-12 max-w-7xl rounded-md px-6 py-8 text-white md:px-0'>
+    <section className='page-animation mx-auto mt-20 mb-12 max-w-7xl rounded-md px-6 py-8 text-white md:px-0'>
       <h1 className='mb-12 border-b-2 border-dashed py-4 text-4xl font-extrabold tracking-tighter md:text-6xl'>
         {pageTitle}
       </h1>
 
       <Image
         src={pageImage}
-        alt={''}
+        alt={`${pageTitle} - Equipment Image`}
         width={200}
         height={200}
         priority

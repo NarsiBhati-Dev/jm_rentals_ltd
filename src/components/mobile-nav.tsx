@@ -55,7 +55,6 @@ const MobileNav = () => {
         ref={navRef}
       >
         <div className='border-jmb-red flex items-center justify-between border-b-4 px-4 py-10 pb-10'>
-          {/* <h2 className='text-3xl font-bold'>Menu</h2> */}
           <Logo />
           <button onClick={() => setIsOpen(false)} aria-label='Close Menu'>
             <SidebarClose />

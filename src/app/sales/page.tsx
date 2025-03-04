@@ -5,7 +5,6 @@ import {
   dealersOf,
   SalesProductImages,
 } from '@/data/brandsWeSell';
-import Link from 'next/link';
 import getPageMetadata from '@/lib/getPageMetadata';
 
 export const metadata = getPageMetadata({ title: 'Sales', path: 'sales' });
@@ -133,12 +132,12 @@ const SalesPage = () => {
 
             {/* CTA Button */}
             <div className='mt-10'>
-              <Link
+              <a
                 href='/rentals'
                 className='bg-primary md:hover:bg-primary-dark rounded-lg px-6 py-3 text-lg font-semibold text-white transition-all'
               >
                 Browse Rentals
-              </Link>
+              </a>
             </div>
           </div>
         </section>

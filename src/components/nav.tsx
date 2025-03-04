@@ -35,19 +35,23 @@ const Nav = () => {
                 onClick={toggleRentalsDropdown}
                 className='ml-2 flex items-center justify-center focus:outline-none'
               >
-                <span className={clsx(isRentalsOpen ? 'rotate-180' : '')}>
+                <span
+                  className={clsx(
+                    isRentalsOpen ? 'text-primary rotate-180' : '',
+                  )}
+                >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'
                     viewBox='0 0 24 24'
                     strokeWidth={1.5}
                     stroke='currentColor'
-                    className='hover:text-primary-dark h-5 w-5'
+                    className='size-6'
                   >
                     <path
                       strokeLinecap='round'
                       strokeLinejoin='round'
-                      d='m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5'
+                      d='m19.5 8.25-7.5 7.5-7.5-7.5'
                     />
                   </svg>
                 </span>

@@ -1,39 +1,83 @@
 'use client';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import Image from 'next/image';
 
+import useEmblaCarousel from 'embla-carousel-react';
+import { useEffect, useState, useCallback } from 'react';
+import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { ProductImages } from '@/data/product-images';
 
-export default function InfiniteSwiper() {
+export default function EmblaCarousel() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-play effect
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const interval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 3000);
+
+    emblaApi.on('pointerDown', () => clearInterval(interval)); // Pause on interaction
+    emblaApi.on('select', () => setCurrentIndex(emblaApi.selectedScrollSnap()));
+
+    return () => clearInterval(interval);
+  }, [emblaApi]);
+
+  // Manual Navigation
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
   return (
-    <Swiper
-      slidesPerView={1}
-      loop={true}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
-      navigation
-      pagination={{ clickable: true }}
-      modules={[Autoplay, Pagination, Navigation]}
-      className='mx-auto mt-8 h-fit w-full max-w-7xl rounded-md px-4 shadow sm:px-0'
-    >
-      {ProductImages.map((src, index) => (
-        <SwiperSlide key={index}>
-          <Image
-            src={src.image}
-            alt={`Slide ${index}`}
-            width={1920}
-            height={1080}
-            className='h-[370px] w-full rounded-md object-center md:h-[700px] md:object-cover'
+    <div className='relative mx-auto mt-8 max-w-7xl'>
+      {/* Carousel */}
+      <div ref={emblaRef} className='overflow-hidden'>
+        <div className='flex'>
+          {ProductImages.map((item, index) => (
+            <div key={index} className='min-w-full'>
+              <div className='relative h-[370px] w-full md:h-[700px]'>
+                <Image
+                  src={item.image}
+                  alt={`Slide ${index + 1}`}
+                  width={1920}
+                  height={1080}
+                  className='h-full w-full rounded-md object-cover'
+                  unoptimized
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation Buttons */}
+      <button
+        className='absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition hover:bg-black md:p-3'
+        aria-label='left swipe'
+        onClick={scrollPrev}
+      >
+        <ChevronLeft size={30} />
+      </button>
+      <button
+        className='absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition hover:bg-black md:p-3'
+        aria-label='Right swipe'
+        onClick={scrollNext}
+      >
+        <ChevronRight size={30} />
+      </button>
+
+      {/* Pagination Dots */}
+      <div className='mt-4 flex justify-center gap-2'>
+        {ProductImages.map((_, index) => (
+          <button
+            key={index}
+            className={`h-3 w-3 rounded-full transition ${
+              currentIndex === index ? 'bg-white' : 'bg-gray-400'
+            }`}
+            onClick={() => emblaApi?.scrollTo(index)}
           />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+        ))}
+      </div>
+    </div>
   );
 }

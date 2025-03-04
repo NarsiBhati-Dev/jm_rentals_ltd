@@ -1,31 +1,5 @@
 import React from 'react';
-
-const features = [
-  {
-    title: 'High-Quality Equipment',
-    description: 'Well-maintained tools & machinery for every job.',
-  },
-  {
-    title: 'Affordable Rates',
-    description: 'Competitive pricing on rentals & sales.',
-  },
-  // {
-  //   title: 'Delivery & Pickup',
-  //   description: 'Hassle-free transportation at your request.',
-  // },
-  // {
-  //   title: 'Custom Orders',
-  //   description: 'Get the right trailer or equipment tailored to your needs.',
-  // },
-  {
-    title: 'Expert Assistance',
-    description: 'Our team helps you find the best solution for your project.',
-  },
-  {
-    title: 'Wide Selection',
-    description: 'Choose from a variety of tools, trailers, and machinery.',
-  },
-];
+import { FeaturesData } from '@/data/featuresData';
 
 const WhyChooseUs = () => {
   return (
@@ -39,7 +13,7 @@ const WhyChooseUs = () => {
       </p>
 
       <div className='mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2'>
-        {features.map((feature, index) => (
+        {FeaturesData.map((feature, index) => (
           <div
             key={index}
             className='bg-background rounded-md p-6 shadow-md transition-transform md:hover:scale-105'

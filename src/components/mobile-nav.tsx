@@ -87,6 +87,27 @@ const MobileNav = () => {
               >
                 {link.title}
               </Link>
+
+              {link.subroutes && (
+                <ul className='mt-2 ml-6 space-y-2'>
+                  {link.subroutes.map((subLink, index) => (
+                    <li key={index} className='ml-6 list-disc'>
+                      <Link
+                        href={subLink.path}
+                        className={clsx(
+                          'ml-2 flex items-center justify-start gap-4 text-xl font-extrabold',
+                          subLink.path === pathname
+                            ? 'text-primary'
+                            : 'text-white',
+                        )}
+                        onClick={onToggleNav}
+                      >
+                        {subLink.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </nav>

@@ -6,14 +6,14 @@ import getPageMetadata from '@/lib/getPageMetadata';
 export const metadata = getPageMetadata({
   title: 'HEAVY EQUIPMENT',
   path: 'rentals/heavy-equipment',
-  image: '/images/rentals/section-heavy-equipment.png',
+  image: '/images/rentals/section-heavy-equipment.webp',
 });
 
 const HeavyEquipmentPage = () => {
   return (
     <RentalsPageTemplate
       pageTitle={'HEAVY EQUIPMENT'}
-      pageImage={'/images/rentals/section-heavy-equipment.png'}
+      pageImage={'/images/rentals/section-heavy-equipment.webp'}
       pageEquipments={HeavyEquipment}
     />
   );

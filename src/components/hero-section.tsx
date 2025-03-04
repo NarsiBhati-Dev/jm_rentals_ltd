@@ -8,7 +8,7 @@ const HeroSection = () => {
       <section className='relative mt-32 w-full'>
         {/* Background Image */}
         <Image
-          src='/images/jm-rentals-main.png'
+          src='/images/jm-rentals-main.webp'
           alt='J&M Rentals'
           width={2560}
           height={699}

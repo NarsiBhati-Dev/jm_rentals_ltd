@@ -6,7 +6,7 @@ import getPageMetadata from '@/lib/getPageMetadata';
 export const metadata = getPageMetadata({
   title: 'MISCELLANEOUS EQUIPMENT',
   path: 'rentals/miscellaneous-equipment',
-  image: '/images/rentals/section-miscellaneous-equipment.png',
+  image: '/images/rentals/section-miscellaneous-equipment.webp',
 });
 
 const MiscellaneousEquipmentPage = () => {
@@ -14,7 +14,7 @@ const MiscellaneousEquipmentPage = () => {
     <>
       <RentalsPageTemplate
         pageTitle={'MISCELLANEOUS EQUIPMENT'}
-        pageImage={'/images/rentals/section-miscellaneous-equipment.png'}
+        pageImage={'/images/rentals/section-miscellaneous-equipment.webp'}
         pageEquipments={MiscellaneousEquipments}
       />
     </>

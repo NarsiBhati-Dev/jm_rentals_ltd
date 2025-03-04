@@ -20,7 +20,7 @@ const siteMetadata = {
   language: 'en-US',
   locale: 'en-US',
 
-  socialBanner: `${SITE_URL}/images/social-banner.png`,
+  socialBanner: `${SITE_URL}/images/social-banner.webp`,
 
   //   contact
   tel: '+12044346755',

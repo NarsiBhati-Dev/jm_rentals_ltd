@@ -10,9 +10,7 @@ const Footer = () => {
       <section className='flex flex-col items-center gap-6 md:flex-row md:justify-between'>
         {/* Logo & Description */}
         <section className='mx-auto max-w-82 text-center md:text-left'>
-          <header>
-            <Logo />
-          </header>
+          <Logo />
           <p className='mt-4 text-justify text-lg text-gray-300 md:text-xl'>
             Equipment rentals are available at minimum, daily, weekly, and
             monthly rates, giving you the flexibility to rent the tool you need

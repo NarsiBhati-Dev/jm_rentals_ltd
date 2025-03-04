@@ -1,5 +1,5 @@
 import { LawnAndGardenEquipments } from '@/data/rentals';
-import RentalsPageTemplate from '@/pages/rentals-page-template';
+import RentalsPageTemplate from '@/components/rentals-page-template';
 import React from 'react';
 import getPageMetadata from '@/lib/getPageMetadata';
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
-    url: './',
+    url: siteMetadata.siteUrl,
     siteName: siteMetadata.title,
     images: [siteMetadata.socialBanner],
     locale: 'en_US',
@@ -60,6 +60,12 @@ export default function RootLayout({
   return (
     <html lang={siteMetadata.language}>
       <head>
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1, viewport-fit=cover'
+        />
+
+        {/* Favicons */}
         <link
           rel='icon'
           type='image/png'
@@ -75,14 +81,9 @@ export default function RootLayout({
         />
         <meta name='apple-mobile-web-app-title' content='J&M' />
         <link rel='manifest' href='/favicons/site.webmanifest' />
-
-        <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1, viewport-fit=cover'
-        />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} scroll-smooth bg-black antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} scroll-smooth bg-black text-white antialiased`}
       >
         <Header />
         {children}

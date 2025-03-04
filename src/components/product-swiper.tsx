@@ -41,8 +41,7 @@ export default function EmblaCarousel() {
                   alt={`Slide ${index + 1}`}
                   width={1920}
                   height={1080}
-                  className='h-full w-full rounded-md object-cover'
-                  unoptimized
+                  className='h-[370px] w-full rounded-md object-center md:h-[700px] md:object-cover'
                 />
               </div>
             </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import getPageMetadata from '@/lib/getPageMetadata';
 
 export const metadata = getPageMetadata({
@@ -12,9 +11,7 @@ const RentalRatesPage = () => {
   console.log('PDF URL:', pdfUrl);
 
   return (
-    <div className='page-animation mx-auto px-4 py-16 text-center'>
-      <h1 className='mb-4 text-2xl font-bold'>Rental Rates 2024</h1>
-
+    <div className='page-animation mx-auto mt-20 px-4 py-10 text-center'>
       {/* PDF Embed */}
       <div className='mx-auto max-w-7xl'>
         <iframe
@@ -26,7 +23,7 @@ const RentalRatesPage = () => {
 
       {/* Download Button */}
       <div className='mt-6'>
-        <Link
+        <a
           href={pdfUrl}
           download
           target='_blank'
@@ -34,7 +31,7 @@ const RentalRatesPage = () => {
           className='rounded-lg bg-amber-800 px-6 py-4 font-bold text-white hover:bg-amber-600'
         >
           Download PDF
-        </Link>
+        </a>
       </div>
     </div>
   );

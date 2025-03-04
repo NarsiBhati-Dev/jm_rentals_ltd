@@ -1,4 +1,12 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+
+if (!envSiteUrl) {
+  throw new Error(
+    '❌ NEXT_PUBLIC_SITE_URL is missing or empty! Check your .env file.',
+  );
+}
+
+const SITE_URL = envSiteUrl.replace(/\/$/, '');
 
 const siteMetadata = {
   title: 'J&M Rentals',
@@ -12,7 +20,7 @@ const siteMetadata = {
   language: 'en-US',
   locale: 'en-US',
 
-  socialBanner: `${SITE_URL}/images/jmb-social-banner.png`,
+  socialBanner: `${SITE_URL}/images/social-banner.png`,
 
   //   contact
   tel: '+12044346755',

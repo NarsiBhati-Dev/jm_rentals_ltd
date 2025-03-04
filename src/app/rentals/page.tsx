@@ -2,6 +2,12 @@ import React from 'react';
 import RentalsCard from '@/components/rentals-card';
 import { RentalCategories } from '@/data/rentals';
 import RentalsCtaButton from '@/components/rentals-cta-button';
+import getPageMetadata from '@/lib/getPageMetadata';
+
+export const metadata = getPageMetadata({
+  title: 'Rentals',
+  path: 'rentals',
+});
 
 const RentalsPage = () => {
   return (

@@ -4,12 +4,18 @@ import SectionContainer from '@/components/section-container';
 import Image from 'next/image';
 import ContactsData from '@/data/contactsData';
 import Contacts, { Kind } from '@/components/contacts';
+import getPageMetadata from '@/lib/getPageMetadata';
 
 const winterHours = [
   { day: 'Monday - Friday', hours: '8:00 AM - 5:00 PM' },
   { day: 'Saturday', hours: '8:00 AM - 12:00 PM' },
   { day: 'Sunday', hours: 'Closed' },
 ];
+
+export const metadata = getPageMetadata({
+  title: 'Contact us',
+  path: 'contact-us',
+});
 
 const ContactPage = () => {
   return (

@@ -6,6 +6,9 @@ import {
   SalesProductImages,
 } from '@/data/brandsWeSell';
 import Link from 'next/link';
+import getPageMetadata from '@/lib/getPageMetadata';
+
+export const metadata = getPageMetadata({ title: 'Sales', path: 'sales' });
 
 const SalesPage = () => {
   return (

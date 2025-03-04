@@ -1,5 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import getPageMetadata from '@/lib/getPageMetadata';
+
+export const metadata = getPageMetadata({
+  title: 'Rental Rates',
+  path: 'rental-rates',
+});
 
 const RentalRatesPage = () => {
   const pdfUrl = '/RentalRates_2024.pdf';

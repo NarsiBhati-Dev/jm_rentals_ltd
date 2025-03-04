@@ -35,16 +35,15 @@ const Footer = () => {
           <section className='mt-4 flex flex-col items-start justify-start gap-4 space-y-3 md:flex-row md:items-start'>
             <a
               href={`tel:${siteMetadata.tel}`}
-              className='flex w-full items-center gap-6 rounded-lg bg-amber-500 px-6 py-3 font-bold text-white shadow-md transition-all hover:bg-amber-600 md:w-auto md:justify-center'
+              className='bg-primary md:hover:bg-primary-dark flex w-full items-center gap-6 rounded-lg px-6 py-3 font-bold text-white shadow-md transition-all md:w-auto md:justify-center'
               aria-label={`Call J&M Rentals at ${siteMetadata.tel}`}
               title='Call J&M Rentals'
             >
               <Phone color={'white'} /> Call Us: {siteMetadata.phone}
             </a>
-
             <a
               href='/rental-rates'
-              className='flex w-full items-center gap-6 rounded-lg bg-gray-700 px-6 py-3 font-bold text-white shadow-md transition-all hover:bg-gray-800 md:w-auto md:justify-center'
+              className='flex w-full items-center gap-6 rounded-lg bg-gray-700 px-6 py-3 font-bold text-white shadow-md transition-all md:w-auto md:justify-center md:hover:bg-gray-800'
               aria-label='View rental rates for 2024'
               title='View Rental Rates'
             >

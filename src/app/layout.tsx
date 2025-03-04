@@ -16,11 +16,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteMetadata.siteUrl),
   title: {
     default: 'J&M Rentals | Tool & Equipment Rentals in Grunthal, Manitoba',
     template: `%s | ${siteMetadata.title}`,
   },
   description: siteMetadata.description,
+
+  openGraph: {
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    url: './',
+    siteName: siteMetadata.title,
+    images: [siteMetadata.socialBanner],
+    locale: 'en_US',
+    type: 'website',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
+  twitter: {
+    title: siteMetadata.title,
+    card: 'summary_large_image',
+    images: [siteMetadata.socialBanner],
+  },
 };
 
 export default function RootLayout({
@@ -46,6 +75,11 @@ export default function RootLayout({
         />
         <meta name='apple-mobile-web-app-title' content='J&M' />
         <link rel='manifest' href='/favicons/site.webmanifest' />
+
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1, viewport-fit=cover'
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} scroll-smooth bg-black antialiased`}

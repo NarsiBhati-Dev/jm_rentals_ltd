@@ -5,7 +5,7 @@ import WhyChooseUs from '@/components/why-choose-us';
 
 export default function Home() {
   return (
-    <main className='md:page-animation'>
+    <main className='page-animation'>
       <HeroSection />
 
       {/* Main Content */}

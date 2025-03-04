@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Geist, Geist_Mono } from 'next/font/google';
 import siteMetadata from '@/data/siteMetadata';
+import Head from 'next/head';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -59,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={siteMetadata.language}>
-      <head>
+      <Head>
         <link
           rel='icon'
           type='image/png'
@@ -80,7 +81,7 @@ export default function RootLayout({
           name='viewport'
           content='width=device-width, initial-scale=1, viewport-fit=cover'
         />
-      </head>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} scroll-smooth bg-black antialiased`}
       >

@@ -12,7 +12,7 @@ export const metadata = getPageMetadata({ title: 'Sales', path: 'sales' });
 
 const SalesPage = () => {
   return (
-    <main className='md:page-animation mt-20 px-4 py-6'>
+    <main className='page-animation mt-20 px-4 py-6'>
       {/* Hero Section */}
       <section className='relative h-[65vh] md:h-[80vh]'>
         <Image
@@ -66,7 +66,6 @@ const SalesPage = () => {
                   alt={brand.brandName}
                   width={140}
                   height={70}
-                  priority
                   className='h-auto w-auto object-cover object-center'
                 />
               </div>
@@ -94,7 +93,6 @@ const SalesPage = () => {
                 <Image
                   src={dealer.logo}
                   alt={dealer.brandName}
-                  priority
                   width={140}
                   height={70}
                   className='h-auto w-auto object-cover object-center'

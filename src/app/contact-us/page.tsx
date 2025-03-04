@@ -19,7 +19,7 @@ export const metadata = getPageMetadata({
 
 const ContactPage = () => {
   return (
-    <main className='md:page-animation px-2 py-4 md:px-4 md:py-6'>
+    <main className='page-animation px-2 py-4 md:px-4 md:py-6'>
       <SectionContainer className='bg-background flex flex-col items-center justify-between gap-4 rounded-lg p-4 shadow-lg md:flex-row md:gap-6 md:p-6'>
         {/* Left & Right Sections Wrapper */}
         <section className='flex w-full flex-col gap-4 md:flex-row md:gap-6'>

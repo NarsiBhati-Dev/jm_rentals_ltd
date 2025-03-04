@@ -11,10 +11,8 @@ const Nav = () => {
   // Get current route
   const pathname = usePathname();
 
-  // State to track if the "RENTALS" dropdown is open
   const [isRentalsOpen, setIsRentalsOpen] = useState(false);
 
-  // Toggle dropdown on click
   const toggleRentalsDropdown = () => setIsRentalsOpen(prev => !prev);
 
   return (
@@ -32,8 +30,7 @@ const Nav = () => {
               {link.title}
             </Link>
 
-            {/* If it's the RENTALS link, show a dropdown icon */}
-            {link.subroutes && (
+            {link.title === 'RENTALS' && (
               <button
                 onClick={toggleRentalsDropdown}
                 className='ml-2 flex items-center justify-center focus:outline-none'
@@ -57,23 +54,24 @@ const Nav = () => {
               </button>
             )}
 
-            {/* Show the dropdown for RENTALS when clicked */}
-            {link.subroutes && isRentalsOpen && pathname && (
+            {link.title === 'RENTALS' && isRentalsOpen && pathname && (
               <ul className='bg-background absolute top-full left-0 mt-4 w-80 -translate-x-32 space-y-4 rounded-md p-4 tracking-tighter text-white'>
-                {link.subroutes.map((subroute, subIndex) => (
-                  <li key={subIndex}>
-                    <Link
-                      href={subroute.path}
-                      onClick={() => setIsRentalsOpen(false)}
-                      className={clsx(
-                        'hover:text-primary-dark cursor-pointer',
-                        pathname === subroute.path && 'text-primary underline',
-                      )}
-                    >
-                      {subroute.title}
-                    </Link>
-                  </li>
-                ))}
+                {link.subroutes &&
+                  link.subroutes.map((subroute, subIndex) => (
+                    <li key={subIndex}>
+                      <Link
+                        href={subroute.path}
+                        onClick={() => setIsRentalsOpen(false)}
+                        className={clsx(
+                          'hover:text-primary-dark cursor-pointer',
+                          pathname === subroute.path &&
+                            'text-primary underline',
+                        )}
+                      >
+                        {subroute.title}
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             )}
           </li>

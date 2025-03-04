@@ -8,7 +8,8 @@ export const metadata = getPageMetadata({
 });
 
 const RentalRatesPage = () => {
-  const pdfUrl = '/RentalRates_2024.pdf';
+  const pdfUrl = '/RentalRates.pdf';
+  console.log('PDF URL:', pdfUrl);
 
   return (
     <div className='page-animation mx-auto px-4 py-16 text-center'>

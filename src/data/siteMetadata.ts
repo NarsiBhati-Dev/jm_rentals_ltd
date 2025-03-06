@@ -11,7 +11,7 @@ const SITE_URL = envSiteUrl.replace(/\/$/, '');
 const siteMetadata = {
   title: 'J&M Rentals',
   description:
-    'J&M Rentals Ltd. offers high-quality tool and equipment rentals in Grunthal, Manitoba. We specialize in lawn & garden equipment, scissor lifts, and earthmoving machinery—perfect for homeowners and contractors alike.',
+    'J&M Rentals Ltd. provides high-quality tool and equipment rentals in Grunthal, Manitoba. Specializing in lawn & garden equipment, scissor lifts, and earthmoving machinery, we offer well-maintained solutions for homeowners and contractors alike.',
 
   developer: 'Narsi Bhati',
 
